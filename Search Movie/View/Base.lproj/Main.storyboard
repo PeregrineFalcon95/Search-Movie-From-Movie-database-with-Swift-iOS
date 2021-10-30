@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Search_Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-lJ-eaX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jXG-vw-7XM">
+                                        <rect key="frame" x="0.0" y="4" width="414" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="eXV-vL-fIH"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQ3-0c-Y0Q">
+                                        <rect key="frame" x="8" y="52" width="402" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Rrg-Ia-KQp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4dS-py-sor">
+                                        <rect key="frame" x="0.0" y="106" width="414" height="712"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bc4-zM-VQF">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jXG-vw-7XM" secondAttribute="trailing" id="1eD-NW-QyJ"/>
+                                    <constraint firstItem="4dS-py-sor" firstAttribute="top" secondItem="eQ3-0c-Y0Q" secondAttribute="bottom" constant="4" id="6IO-NC-ACX"/>
+                                    <constraint firstItem="jXG-vw-7XM" firstAttribute="leading" secondItem="wD2-lJ-eaX" secondAttribute="leading" id="FPC-5w-dKR"/>
+                                    <constraint firstItem="eQ3-0c-Y0Q" firstAttribute="leading" secondItem="wD2-lJ-eaX" secondAttribute="leading" constant="8" id="Rjn-ap-1H3"/>
+                                    <constraint firstAttribute="trailing" secondItem="eQ3-0c-Y0Q" secondAttribute="trailing" constant="4" id="bh5-4D-h89"/>
+                                    <constraint firstItem="4dS-py-sor" firstAttribute="leading" secondItem="wD2-lJ-eaX" secondAttribute="leading" id="ddp-Dz-O8c"/>
+                                    <constraint firstItem="eQ3-0c-Y0Q" firstAttribute="top" secondItem="jXG-vw-7XM" secondAttribute="bottom" constant="4" id="drn-aO-8iZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="4dS-py-sor" secondAttribute="trailing" id="js5-en-kgG"/>
+                                    <constraint firstAttribute="bottom" secondItem="4dS-py-sor" secondAttribute="bottom" id="pyV-Fs-6Ix"/>
+                                    <constraint firstItem="jXG-vw-7XM" firstAttribute="top" secondItem="wD2-lJ-eaX" secondAttribute="top" constant="4" id="yxU-kY-bd4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wD2-lJ-eaX" secondAttribute="bottom" id="T0V-kh-dwn"/>
+                            <constraint firstItem="wD2-lJ-eaX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="W8T-2D-9cd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wD2-lJ-eaX" secondAttribute="trailing" id="fGC-UT-ack"/>
+                            <constraint firstItem="wD2-lJ-eaX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qLL-Eb-hCe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="wD2-lJ-eaX" id="lj5-Rp-gy0"/>
+                        <outlet property="movieInfoCollectionView" destination="4dS-py-sor" id="SSy-Be-nrV"/>
+                        <outlet property="searchBar" destination="jXG-vw-7XM" id="bK8-wR-tWy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
